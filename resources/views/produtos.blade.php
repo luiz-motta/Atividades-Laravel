@@ -51,7 +51,7 @@
         <th scope="row"> {{ ++$contador2 }}</th>
         <td> {{ $produtoUsado['nome'] }} </td>
         <td> {{ $produtoUsado['categoria'] }} </td>
-        <td> {{ 'R$ ' .number_format($produtoUsado['preco'], 2, ',', '.') }} </td>
+        <td> {{ 'R$ ' . number_format($produtoUsado['preco'], 2, ',', '.') }} </td>
     </tr>
 
 @endforeach

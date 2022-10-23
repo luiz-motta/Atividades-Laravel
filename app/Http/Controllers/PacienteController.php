@@ -41,7 +41,7 @@ class PacienteController extends Controller
     };
 
     $resultado = match(true) {
-        is_numeric($imc) && strlen($abreviacao) < 5 => "Olá " . $abreviacao . " " . ucfirst($nome) . " , seu IMC é " . number_format($imc, 2) . " .Você está " . $faixaIMC . ".",
+        is_numeric($imc) && strlen($abreviacao) < 5 => "Olá " . $abreviacao . " " . ucfirst(strtolower($nome)) . " , seu IMC é " . number_format($imc, 2) . ". Você está " . $faixaIMC . ".",
         !is_numeric($imc) =>  $imc,
         strlen($abreviacao) >= 5 =>  $abreviacao,
     };
